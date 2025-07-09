@@ -31,11 +31,16 @@ from google.adk.events.event_actions import EventActions as ADKEventActions
 from google.adk.memory.in_memory_memory_service import InMemoryMemoryService
 from google.adk.sessions.in_memory_session_service import InMemorySessionService
 from google.genai import types
+import sys
+import os
+# Add the project root to the Python path
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../../..')))
+
 from hosts.multiagent.host_agent import HostAgent
 from hosts.multiagent.remote_agent_connection import (
     TaskCallbackArg,
 )
-from utils.agent_card import get_agent_card
+from demo.ui.utils.agent_card import get_agent_card
 
 from service.server.application_manager import ApplicationManager
 from service.types import Conversation, Event

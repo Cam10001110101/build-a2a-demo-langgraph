@@ -1,0 +1,54 @@
+# Setup Environment
+
+```bash
+# Install dependencies using uv (no need to manually create venv)
+uv sync
+```
+
+# Start LangGraph Agent
+
+From root directory:
+
+```bash
+uv run python -m agents.app
+```
+
+# Start a2a Inspector
+
+Frontend:
+
+```bash
+cd a2a-inspector/frontend && npm run build -- --watch
+```
+
+Backend:
+
+```bash
+cd a2a-inspector/backend && uv run app.py
+```
+
+# Start Agent Chat UI
+
+```bash
+cd demo/ui && uv run main.py
+```
+
+# Endpoint URLs
+
+## LangGraph Currency Agent
+
+```text
+http://localhost:10000
+```
+
+## a2a Inspector
+
+```text
+http://127.0.0.1:5001
+```
+
+## Agent Chat UI
+
+```text
+http://0.0.0.0:12000/
+```
