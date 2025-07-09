@@ -40,6 +40,9 @@ cd demo/ui && uv run main.py
 ```text
 http://localhost:10000
 ```
+```
+http://localhost:10000/.well-known/agent.json
+```
 
 ## a2a Inspector
 
